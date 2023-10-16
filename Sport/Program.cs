@@ -7,3 +7,7 @@ Equipe equipe = new Equipe("Stagiaire");
 contrat.addJoueur(joueur);
 contrat.addEquipe(equipe);
 Console.WriteLine(contrat.ToString());
+Console.WriteLine("-----------------");
+contrat.removeJoueur(joueur);
+contrat.removeEquipe(equipe);
+Console.WriteLine(contrat.ToString());

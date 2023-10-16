@@ -24,9 +24,15 @@ namespace Sport
         }
         public override string ToString()
         {
+            if (this.equipe != null && this.joueur !=null)
+            {              
             return $@"Le contrat à pour ID : {this.idContrat}
 Il début le {this.dateDebut} et finit le {this.dateFin}
-Il concerne {this.joueur} dans {this.equipe}";
+Il concerne {this.joueur} dans {this.equipe}.";
+            }
+            return $@"Le contrat à pour ID : {this.idContrat}
+Il début le {this.dateDebut} et finit le {this.dateFin}
+Et n'appartient à aucune équipe.";
         }
         public void addJoueur(Joueur joueur)
         {
@@ -35,6 +41,14 @@ Il concerne {this.joueur} dans {this.equipe}";
         public void addEquipe(Equipe equipe)
         {
             this.equipe = equipe;
+        }
+        public void removeJoueur(Joueur joueur)
+        {
+            this.joueur = null;
+        }
+        public void removeEquipe(Equipe equipe)
+        {
+            this.equipe = null;
         }
 
     }
